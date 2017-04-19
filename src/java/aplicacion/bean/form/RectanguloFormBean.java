@@ -40,8 +40,10 @@ public class RectanguloFormBean {
     public void calcularOtrosPuntos(){
         Punto unPuntoA=new Punto (getX1(),getY1());
         Rectangulo rectangulo= new Rectangulo();
-        setPuntosEncontrados(rectangulo.encontrarNuevoPunto(unPuntoA,getBase(),getAltura()));
-        unRectangulo=new Rectangulo(puntosEncontrados.get(1),puntosEncontrados.get(2),puntosEncontrados.get(3));
+        setPuntosEncontrados
+        (rectangulo.encontrarNuevoPunto(unPuntoA,getBase(),getAltura()));
+        unRectangulo=new Rectangulo
+        (puntosEncontrados.get(0),puntosEncontrados.get(1),puntosEncontrados.get(2),puntosEncontrados.get(3));
         
         
     }
