@@ -51,7 +51,6 @@ public class Rectangulo {
         
         return puntos;
     }
-
     /**
      * @return the baseRec
      */
