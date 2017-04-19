@@ -58,8 +58,8 @@ public class Rectangulo {
     public double getBaseRec() {
         return baseRec;
     }
-    public double calcularSup(Rectangulo A){
-        supRec=(A.alturaRec*A.baseRec);
+    public double calcularSup(double base, double altura){
+        supRec=(base*altura);
         return supRec;
     }
     public double calcularPer (Rectangulo A){

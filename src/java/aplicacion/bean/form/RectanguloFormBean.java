@@ -47,9 +47,8 @@ public class RectanguloFormBean {
         unRectangulo=new Rectangulo
         (puntosEncontrados.get(0),puntosEncontrados.get(1),puntosEncontrados.get(2),puntosEncontrados.get(3));
     }
-    public double supRectangulo(){
-        supR=(unRectangulo.calcularSup(unRectangulo));
-        return supR;
+    public void supRectangulo(){
+        setSupR(unRectangulo.calcularSup(getBase(),getAltura()));
     }
     public RectanguloFormBean(double x1, double y1, double base, double altura) {
         this.x1 = x1;
@@ -138,6 +137,20 @@ public class RectanguloFormBean {
      */
     public void setUnRectangulo(Rectangulo unRectangulo) {
         this.unRectangulo = unRectangulo;
+    }
+
+    /**
+     * @return the supR
+     */
+    public double getSupR() {
+        return supR;
+    }
+
+    /**
+     * @param supR the supR to set
+     */
+    public void setSupR(double supR) {
+        this.supR = supR;
     }
     
 }
