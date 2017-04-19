@@ -19,6 +19,21 @@ public class Rango {
     private int pares;
     private int impares;
    
+    
+    
+    
+    private int calcularImpar(){
+   
+        int aux=a;
+        setImpares(0);
+        while(aux<b){
+            if (aux%2!=0){
+               setImpares(getImpares()+1); 
+               aux=aux+1;
+            }
+        }
+        return getImpares();
+    }
     /**
      * @return the a
      */
