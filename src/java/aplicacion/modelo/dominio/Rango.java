@@ -34,6 +34,19 @@ public class Rango {
         }
         return getImpares();
     }
+    
+    private int calcularPar(){
+        int aux=a;
+        setPares(0);
+        while(aux<b){
+            if (aux%2==0){
+                setPares(getPares()+1);
+                aux=aux+1;
+            }
+        }
+        return getPares();
+    }
+    
     /**
      * @return the a
      */
