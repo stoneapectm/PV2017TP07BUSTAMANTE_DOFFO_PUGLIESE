@@ -18,10 +18,11 @@ public class Rectangulo {
     private Punto unPuntoB;
     private Punto unPuntoC;
     private Punto unPuntoD;
-
+    private double supRec;
+    private double perRec;
     public Rectangulo() {
     }
-
+    
     public Rectangulo(Punto unPuntoOrigen, Punto unPuntoB, Punto unPuntoC, Punto unPuntoD) {
         this.unPuntoOrigen = unPuntoOrigen;
         this.unPuntoB = unPuntoB;
@@ -57,7 +58,14 @@ public class Rectangulo {
     public double getBaseRec() {
         return baseRec;
     }
-
+    public double calcularSup(Rectangulo A){
+        supRec=(A.alturaRec*A.baseRec);
+        return supRec;
+    }
+    public double calcularPer (Rectangulo A){
+        perRec=(A.baseRec*2+A.alturaRec*2);
+        return perRec;
+    }
     /**
      * @param baseRec the baseRec to set
      */
