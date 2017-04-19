@@ -68,10 +68,17 @@
                     <p:outputLabel id="txtYD" value="#{rectanguloFormBean.unRectangulo.unPuntoD.y}"/>
                     <p:outputLabel id="lblPuntoRD2" value=")" />
                     
-                    <p:outputLabel id="lblRsup" value="Perimetro(" />
-                    <p:outputLabel id="txtSup" value="#{rectanguloFormBean.supR}"/>
+                    <p:outputLabel id="lblRsup" value="Superficie(" />
+                    <p:outputLabel id="txtsup" value="#{rectanguloFormBean.supR}"/>
                     <p:outputLabel id="lblRsup2" value=")" /> 
-                    <p:commandButton id="btnCalcularSuperficie" value="Calcular" update="txtSup" action="#{rectanguloFormBean.supRectangulo()}"/>
+                    <p:commandButton id="btnCalcularSuperficie" value="Calcular" update="txtsup" action="#{rectanguloFormBean.supRectangulo()}"/>
+                    
+                    <p:outputLabel id="lblRper" value="Perimetro(" />
+                    <p:outputLabel id="txtper" value="#{rectanguloFormBean.perR}"/>
+                    <p:outputLabel id="lblRper2" value=")" /> 
+                    <p:commandButton id="btnCalcularPerimetro" value="Calcular" update="txtper" action="#{rectanguloFormBean.perRectangulo()}"/>
+                    
+                    
                      
                 </h:panelGrid>
             </h:form>

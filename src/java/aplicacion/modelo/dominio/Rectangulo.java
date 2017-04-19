@@ -62,8 +62,8 @@ public class Rectangulo {
         supRec=(base*altura);
         return supRec;
     }
-    public double calcularPer (Rectangulo A){
-        perRec=(A.baseRec*2+A.alturaRec*2);
+    public double calcularPer (double base, double altura){
+        perRec=(base*2+altura*2);
         return perRec;
     }
     /**
