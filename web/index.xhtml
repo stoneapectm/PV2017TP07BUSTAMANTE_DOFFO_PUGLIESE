@@ -32,37 +32,41 @@
                  style="width: 400px"
                  footer="Escuela de Minas">
             <h:form id="frmRectangulo">
-                <h:panelGrid id="Rectangulo" columns="4">
-                    <p:outputLabel id="lblA11" value="PuntoA(" />
-                    <p:inputText id="txtA11X" value="" size="3" />
-                    <p:inputText id="txtA11Y" value="" size="3" />
-                    <p:outputLabel id="lblA22" value=")" />
+                <h:panelGrid id="tblEntradaPunto" columns="4">
+                    <p:outputLabel id="lblPuntoA1" value="A(" />
+                    <p:inputText id="txtXA" value="#{rectanguloFormBean.x1}" size="3" />
+                    <p:inputText id="txtYA" value="#{rectanguloFormBean.y1}" size="3" />
+                    <p:outputLabel id="lblPuntoA2" value=")" />
                 </h:panelGrid>
-                <h:panelGrid id="tblBaseAltura1" columns="2" >
-                    
-                    <p:outputLabel id="lblAltura" value="Altura: " />
-                    <p:inputText id="txtAltura" value="" size="3" />
-
-                    <p:outputLabel id="lblBase" value="Base: " />
-                    <p:inputText id="txtBase" value="" size="3" />
-                    
-                    <p:commandButton id="btnCalcular" value="Calcular: " update="" />
+                <h:panelGrid id="tblBaseAltura" columns="2">
+                    <p:outputLabel id="lblAltura" value="Altura" />
+                    <p:inputText id="txtAltura" value="#{rectanguloFormBean.base}" size="7" />
+                    <p:outputLabel id="lblBase" value="Base" />
+                    <p:inputText id="txtBase" value="#{rectanguloFormBean.altura}" size="7" />
+                    <p:commandButton id="btnCalcularRectangulo" value="Calcular" update="tblRectanguloResultado" action="#{rectanguloFormBean.calcularOtrosPuntos()}"/>
                 </h:panelGrid>
-                <h:panelGrid id="tblBaseAltura" columns="2" >
-                    <p:outputLabel id="lblB1" value="PuntoB(" />
-                    <p:inputText id="txtB1X" value="" size="2" />
-                    <p:inputText id="txtB1Y" value="" size="2" />
-                    <p:outputLabel id="lblB2" value=")" />
+                  
+                
+                <h:panelGrid id="tblRectanguloResultado" columns="4" >
+                    <p:outputLabel id="lblPuntoRA1" value="A(" />
+                    <p:outputlabel id="lblXRA" value="#{rectanguloFormBean.unRectangulo.unPuntoOrigen.x}"/>
+                    <p:outputlabel id="txtYRA" value="#{rectanguloFormBean.unRectangulo.unPuntoOrigen.y}"/>
+                    <p:outputLabel id="lblPuntoRA2" value=")" />
                     
-                    <p:outputLabel id="lblC1" value="PuntoC(" />
-                    <p:inputText id="txtC1X" value="" size="3" />
-                    <p:inputText id="txtC1Y" value="" size="3" />
-                    <p:outputLabel id="lblC2" value=")" />
+                    <p:outputLabel id="lblPuntoRB1" value="B(" />
+                    <p:outputlabel id="txtXB" value="#{rectanguloFormBean.unRectangulo.unPuntoOrigen.x}"/>
+                    <p:outputlabel id="txtYB" value="#{rectanguloFormBean.unRectangulo.unPuntoOrigen.y}"/>
+                    <p:outputLabel id="lblPuntoRB2" value=")" />
                     
-                    <p:outputLabel id="lblD1" value="PuntoD(" />
-                    <p:inputText id="txtD1X" value="" size="3" />
-                    <p:inputText id="txtD1Y" value="" size="3" />
-                    <p:outputLabel id="lblD2" value=")" />
+                    <p:outputLabel id="lblPuntoRC1" value="C(" />
+                    <p:outputlabel id="txtXC" value="#{rectanguloFormBean.unRectangulo.unPuntoOrigen.x}"/>
+                    <p:outputlabel id="txtYC" value="#{rectanguloFormBean.unRectangulo.unPuntoOrigen.y}"/>
+                    <p:outputLabel id="lblPuntoRC2" value=")" />
+                    
+                    <p:outputLabel id="lblPuntoRD1" value="PuntoD(" />
+                    <p:outputlabel id="txtXD" value="#{rectanguloFormBean.unRectangulo.unPuntoOrigen.x}"/>
+                    <p:outputlabel id="txtYD" value="#{rectanguloFormBean.unRectangulo.unPuntoOrigen.y}"/>
+                    <p:outputLabel id="lblPuntoRD2" value=")" />
                 </h:panelGrid>
             </h:form>
         </p:panel>
