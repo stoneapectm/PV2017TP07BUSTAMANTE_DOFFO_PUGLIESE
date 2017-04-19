@@ -24,6 +24,8 @@ public class RectanguloFormBean {
     private double altura;
     private ArrayList<Punto> puntosEncontrados;
     private Rectangulo unRectangulo;
+    private double supR;
+   
     
     public RectanguloFormBean(double x1, double y1, double base, double altura, ArrayList<Punto> puntosEncontrados, Rectangulo unRectangulo) {
         this.x1 = x1;
@@ -33,8 +35,8 @@ public class RectanguloFormBean {
         this.puntosEncontrados = puntosEncontrados;
         this.unRectangulo = unRectangulo;
     }
-     
-
+    
+   
     public RectanguloFormBean() {
     }
     public void calcularOtrosPuntos(){
@@ -45,7 +47,10 @@ public class RectanguloFormBean {
         unRectangulo=new Rectangulo
         (puntosEncontrados.get(0),puntosEncontrados.get(1),puntosEncontrados.get(2),puntosEncontrados.get(3));
     }
-    
+    public double supRectangulo(){
+        supR=(unRectangulo.calcularSup(unRectangulo));
+        return supR;
+    }
     public RectanguloFormBean(double x1, double y1, double base, double altura) {
         this.x1 = x1;
         this.y1 = y1;
