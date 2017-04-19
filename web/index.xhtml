@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Franco Pugliese</title>
+    </h:head>
+    <h:body>
+        <p:panel id="pnlDistancia"
+                 header="calculo de distancia"
+                 style="width: 400px"
+                 footer="Escuela de Minas">
+            <h:form id="frmDistancia">
+                <h:panelGrid id="tblDistancia" columns="4">
+                    <p:outputLabel id="lblA1" value="Punto(" />
+                    <p:inputText id="txtA1X" value="#{distanciaFormBean.x1}" size="3" />
+                    <p:inputText id="txtA1Y" value="#{distanciaFormBean.y1}" size="3" />
+                    <p:outputLabel id="lblA2" value=")" />
+                    
+                    <p:outputLabel id="lblB1" value="Punto(" />
+                    <p:inputText id="txtB1X" value="#{distanciaFormBean.x2}" size="3" />
+                    <p:inputText id="txtB1Y" value="#{distanciaFormBean.y2}" size="3" />
+                    <p:outputLabel id="lblB2" value=")" />
+                    <p:commandButton id="btnCalcular" value="Calcular" update="lblValorDistancia" action="#{distanciaFormBean.asignarValor()}"/>
+                    <p:outputLabel id="lblValorDistancia" value="#{distanciaFormBean.d}"/>
+                </h:panelGrid>
+            </h:form>
+        </p:panel>
+        <p:panel id="pnlRectangulo"
+                 header="Rectángulo"
+                 style="width: 400px"
+                 footer="Escuela de Minas">
+            <h:form id="frmRectangulo">
+                <h:panelGrid id="Rectangulo" columns="4">
+                    <p:outputLabel id="lblA11" value="PuntoA(" />
+                    <p:inputText id="txtA11X" value="" size="3" />
+                    <p:inputText id="txtA11Y" value="" size="3" />
+                    <p:outputLabel id="lblA22" value=")" />
+                </h:panelGrid>
+                <h:panelGrid id="tblBaseAltura1" columns="2" >
+                    
+                    <p:outputLabel id="lblAltura" value="Altura: " />
+                    <p:inputText id="txtAltura" value="" size="3" />
+
+                    <p:outputLabel id="lblBase" value="Base: " />
+                    <p:inputText id="txtBase" value="" size="3" />
+                    
+                    <p:commandButton id="btnCalcular" value="Calcular: " update="" />
+                </h:panelGrid>
+                <h:panelGrid id="tblBaseAltura" columns="2" >
+                    <p:outputLabel id="lblB1" value="PuntoB(" />
+                    <p:inputText id="txtB1X" value="" size="2" />
+                    <p:inputText id="txtB1Y" value="" size="2" />
+                    <p:outputLabel id="lblB2" value=")" />
+                    
+                    <p:outputLabel id="lblC1" value="PuntoC(" />
+                    <p:inputText id="txtC1X" value="" size="3" />
+                    <p:inputText id="txtC1Y" value="" size="3" />
+                    <p:outputLabel id="lblC2" value=")" />
+                    
+                    <p:outputLabel id="lblD1" value="PuntoD(" />
+                    <p:inputText id="txtD1X" value="" size="3" />
+                    <p:inputText id="txtD1Y" value="" size="3" />
+                    <p:outputLabel id="lblD2" value=")" />
+                </h:panelGrid>
+            </h:form>
+        </p:panel>
+    </h:body>
+</html>
+
+
