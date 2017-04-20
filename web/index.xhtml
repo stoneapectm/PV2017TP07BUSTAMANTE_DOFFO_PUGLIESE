@@ -4,7 +4,7 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui">
     <h:head>
-        <title>Team oepectm</title>
+        <title>Team stoneapectm</title>
     </h:head>
     <h:body>
         <p:panel id="pnlDistancia"
@@ -90,22 +90,25 @@
                  footer="Escuela de Minas">
             <h:form id="frmCantNum">
                 <h:panelGrid id="tblCantNum" columns="2">
-                    <p:outputLabel id="lblEinf" value="Extremo Inferior = " />
-                    <p:inputText id="txtEinf" value="" size="3" />
+                    <p:outputLabel id="lblEinf" value="Ingrese el valor inicial" />
+                    <p:inputText id="txtEinf" value="#{rangoFormBean.a}" size="3" />
                     
-                   <p:outputLabel id="lblEsup" value="Extremo Sup = " />
-                    <p:inputText id="txtEsup" value="" size="3" />
+                   <p:outputLabel id="lblEsup" value="Ingrese el valor final" />
+                   <p:inputText id="txtEsup" value="#{rangoFormBean.b}" size="3" />
                     
-                    <p:commandButton id="btnCalcularCant" value="Calcular Cantidad" update="lblPares" action=""/>
+                    <p:commandButton id="btnCalcularCant" value="Calcular Cantidad" action="#{rangoFormBean.calcularCantNum()}"/>
                     
-                    <p:outputLabel id="lblPares" value="Cantidad de Numeros Pares" />
-                    <p:outputLabel id="lblCantidadPares" value=""/>
+                    <p:outputLabel id="lblPares1" value="Pares(" />
+                    <p:outputLabel id="lblCantidadPares" value="#{rangoFormBean.pares}"/>
+                    <p:outputLabel id="lblPares2" value=")"/>
                     
-                    <p:outputLabel id="lblImpares" value="Cantidad de Numeros Impares" />
-                    <p:outputLabel id="lblCantidadImpares" value=""/>
+                    <p:outputLabel id="lblImpares1" value="Impares(" />
+                    <p:outputLabel id="lblCantidadImpares" value="#{rangoFormBean.impares}"/>
+                    <p:outputLabel id="lblImpares2" value=")"/>
                     
-                    <p:outputLabel id="lblPrimos" value="Cantidad de Numeros Primos" />
-                    <p:outputLabel id="lblCantidadPrimos" value=""/>
+                    <p:outputLabel id="lblPrimos1" value="Primos(" />
+                    <p:outputLabel id="lblCantidadPrimos" value="#{rangoFormBean.primos}"/>
+                    <p:outputLabel id="lblPrimos2" value=")"/>
                 </h:panelGrid>
             </h:form>
         </p:panel>
