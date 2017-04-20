@@ -1,65 +1,46 @@
- /*
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package aplicacion.modelo.dominio;
+package aplicacion.bean.form;
+
+import aplicacion.modelo.dominio.Rango;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 
 /**
  *
  * @author Franco
  */
-public class Rango {
+@ManagedBean
+@SessionScoped
+public class RangoFormBean {
 
-    public Rango() {
+    /**
+     * Creates a new instance of RangoFormBean
+     */
+    public RangoFormBean() {
     }
     private int a;
     private int b;
     private int primos;
     private int pares;
     private int impares;
-
-    public Rango(int a, int b) {
-        this.a = a;
-        this.b = b;
+    
+    public void calcularCantNum(){
+        Rango unRango= new Rango(getA(),getB());
+        setImpares(unRango.calcularImpar(getA(),getB()));
+        setPares(unRango.calcularPar());
         
     }
-   
-    
-    
-    
-    public int calcularImpar(int a, int b){
-   
-        int aux=a;
-        setImpares(0);
-        while(aux<b){
-            if (aux%2!=0){
-               setImpares(getImpares()+1); 
-               aux=aux+1;
-            }
-        }
-        return getImpares();
-    }
-    
-    public int calcularPar(){
-        int aux=a;
-        setPares(0);
-        while(aux<b){
-            if (aux%2==0){
-                setPares(getPares()+1);
-                aux=aux+1;
-            }
-        }
-        return getPares();
-    }
-    
     /**
      * @return the a
      */
     public int getA() {
         return a;
     }
-    
+
     /**
      * @param a the a to set
      */
