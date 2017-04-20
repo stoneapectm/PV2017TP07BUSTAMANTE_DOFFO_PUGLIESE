@@ -83,6 +83,32 @@
                 </h:panelGrid>
             </h:form>
         </p:panel>
+        
+        <p:panel id="pnlParesPrimosImpares"
+                 header="calculo de Pares, Primos, Impares"
+                 style="width: 400px"
+                 footer="Escuela de Minas">
+            <h:form id="frmCantNum">
+                <h:panelGrid id="tblCantNum" columns="2">
+                    <p:outputLabel id="lblEinf" value="Extremo Inferior = " />
+                    <p:inputText id="txtEinf" value="" size="3" />
+                    
+                   <p:outputLabel id="lblEsup" value="Extremo Sup = " />
+                    <p:inputText id="txtEsup" value="" size="3" />
+                    
+                    <p:commandButton id="btnCalcularCant" value="Calcular Cantidad" update="lblPares" action="#{distanciaFormBean.asignarValor()}"/>
+                    
+                    <p:outputLabel id="lblPares" value="Cantidad de Numeros Pares" />
+                    <p:outputLabel id="lblCantidadPares" value=""/>
+                    
+                    <p:outputLabel id="lblImpares" value="Cantidad de Numeros Impares" />
+                    <p:outputLabel id="lblCantidadImpares" value=""/>
+                    
+                    <p:outputLabel id="lblPrimos" value="Cantidad de Numeros Primos" />
+                    <p:outputLabel id="lblCantidadPrimos" value=""/>
+                </h:panelGrid>
+            </h:form>
+        </p:panel>
     </h:body>
 </html>
 
