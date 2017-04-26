@@ -29,13 +29,16 @@ public class Rango {
     
     
     public int calcularImpar(int a, int b){
-   
+        System.out.println("valores"+a+b);
         int aux=a;
         setImpares(0);
         while(aux<b){
             if (aux%2!=0){
                setImpares(getImpares()+1); 
                aux=aux+1;
+            }
+            else{
+                aux=aux+1;
             }
         }
         return getImpares();
@@ -44,9 +47,12 @@ public class Rango {
     public int calcularPar(){
         int aux=a;
         setPares(0);
-        while(aux<b){
+        while(aux<=b){
             if (aux%2==0){
                 setPares(getPares()+1);
+                aux=aux+1;
+            }
+            else{
                 aux=aux+1;
             }
         }

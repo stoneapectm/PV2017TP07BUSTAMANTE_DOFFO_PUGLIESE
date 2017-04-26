@@ -96,7 +96,9 @@
                    <p:outputLabel id="lblEsup" value="Ingrese el valor final" />
                    <p:inputText id="txtEsup" value="#{rangoFormBean.b}" size="3" />
                     
-                    <p:commandButton id="btnCalcularCant" value="Calcular Cantidad" action="#{rangoFormBean.calcularCantNum()}"/>
+                    <p:commandButton id="btnCalcularCant" value="Calcular Cantidad" 
+                                     update ="frmCantNum"
+                                     action="#{rangoFormBean.calcularCantNum()}"/>
                     
                     <p:outputLabel id="lblPares1" value="Pares(" />
                     <p:outputLabel id="lblCantidadPares" value="#{rangoFormBean.pares}"/>

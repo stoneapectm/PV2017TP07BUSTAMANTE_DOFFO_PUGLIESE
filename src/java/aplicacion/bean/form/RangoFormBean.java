@@ -29,9 +29,11 @@ public class RangoFormBean {
     private int impares;
     
     public void calcularCantNum(){
+        System.out.println("valores"+a+b);
         Rango unRango= new Rango(getA(),getB());
         setImpares(unRango.calcularImpar(getA(),getB()));
         setPares(unRango.calcularPar());
+        
         
     }
     /**
