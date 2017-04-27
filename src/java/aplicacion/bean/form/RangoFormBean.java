@@ -33,8 +33,7 @@ public class RangoFormBean {
         Rango unRango= new Rango(getA(),getB());
         setImpares(unRango.calcularImpar(getA(),getB()));
         setPares(unRango.calcularPar());
-        
-        
+        setPrimos(unRango.calcularPrimos(getA(), getB()));
     }
     /**
      * @return the a

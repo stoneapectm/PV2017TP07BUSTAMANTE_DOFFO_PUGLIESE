@@ -59,13 +59,12 @@ public class Rango {
         return getPares();
     }
     
-    private int calcularPrimos(int a, int b){
+    public int calcularPrimos(int a, int b){
         int i,j,c;
         c=0;
-        
         setPrimos(0);
         for(i=a;i<=b;i++){
-            j=i;
+             j=i;
             while(j<=b){
                 if(i%j==0){
                 c++;    
