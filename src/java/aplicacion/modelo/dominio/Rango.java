@@ -60,19 +60,21 @@ public class Rango {
     }
     
     public int calcularPrimos(int a, int b){
-        int i,j,c;
-        c=0;
+        int i;
+        int j;
+        int c;
         setPrimos(0);
         for(i=a;i<=b;i++){
-             j=i;
-            while(j<=b){
+            c=0;
+            j=i;
+            while(j>0){
                 if(i%j==0){
-                c++;    
-               }
-            j++;
-            if(c==2){
-                setPrimos(getPrimos()+1);
-            }
+                    c=c+1;    
+                }
+                j=j-1;
+                if((c==2)&&(j==0)){
+                    setPrimos(getPrimos()+1);
+                }
             }
         }
         return getPrimos();
